@@ -1,0 +1,40 @@
+while true; do
+    clear
+    echo "==================================="
+    echo "  Android Studio Uninstaller"
+    echo "==================================="
+    echo "Type a number and press Enter:"
+    echo "1. Uninstall Android Studio"
+    echo "2. Exit"
+    echo "==================================="
+
+    echo -n "Your choice: "
+    read choice
+
+    if [ "$choice" = "1" ]; then
+        echo "Uninstalling Android Studio..."
+        rm -Rf /Applications/Android\ Studio.app
+        rm -Rf ~/Library/Preferences/com.google.android.
+        rm -Rf ~/Library/Preferences/com.android.
+        rm -Rf ~/Library/Application\ Support/AndroidStudio
+        rm -Rf ~/Library/Logs/AndroidStudio
+        rm -Rf ~/Library/Caches/AndroidStudio
+        rm -Rf ~/.AndroidStudio
+        rm -Rf ~/.gradle
+        rm -Rf ~/.android
+        rm -Rf ~/Library/Android
+        rm -Rf /usr/local/var/lib/android-sdk/
+        rm -Rf ~/AndroidStudioProjects
+        echo "Uninstallation complete."
+        echo -n "Press Enter to return to menu..."
+        read
+
+    elif [ "$choice" = "2" ]; then
+        echo "Exiting..."
+        exit 0
+
+    else
+        echo "Invalid option! Please type 1 or 2."
+        sleep 1
+    fi
+done
