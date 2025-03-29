@@ -1,1 +1,3 @@
-# Android-Studio-Remover-MACOS
+# Remove Android Studio On Macos
+
+# How You Launch
